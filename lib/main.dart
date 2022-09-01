@@ -12,6 +12,7 @@ class UpperzApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -28,7 +29,17 @@ class HomeApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Les widget"),
+        title: const Text("Upperz tutos"),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.add),
+          ),
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.download),
+          )
+        ],
       ),
       body: const Padding(
         padding: EdgeInsets.all(15),
