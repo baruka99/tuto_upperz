@@ -29,7 +29,7 @@ class HomeApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Upperz tutos"),
+        title: const Text("Upperz-Multiple layout widget"),
         actions: [
           IconButton(
             onPressed: () {},
@@ -44,7 +44,7 @@ class HomeApp extends StatelessWidget {
       body: const Padding(
         padding: EdgeInsets.all(15),
         child: Center(
-          child: TextWidget(),
+          child: VerticalHorizontalShow(),
         ),
       ),
     );
