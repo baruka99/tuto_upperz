@@ -110,3 +110,65 @@ class CustomContainer extends StatelessWidget {
     );
   }
 }
+
+class StackWidget extends StatelessWidget {
+  const StackWidget({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+      children: [
+        Container(
+          height: 200,
+          width: 200,
+          color: Colors.blue,
+        ),
+        Container(
+          height: 100,
+          width: 100,
+          color: Colors.red,
+        ),
+        Container(
+          height: 50,
+          width: 50,
+          color: Colors.green,
+        ),
+      ],
+    );
+  }
+}
+
+class CenteredStackWidget extends StatelessWidget {
+  const CenteredStackWidget({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+      children: [
+        Container(
+          height: 200,
+          width: 200,
+          color: Colors.blue,
+        ),
+        Positioned(
+          left: 50,
+          top: 50,
+          right: 50,
+          bottom: 50,
+          child: Container(
+            color: Colors.red,
+          ),
+        ),
+        Positioned(
+          left: 80,
+          top: 80,
+          right: 80,
+          bottom: 80,
+          child: Container(
+            color: Colors.green,
+          ),
+        ),
+      ],
+    );
+  }
+}

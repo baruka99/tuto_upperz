@@ -44,7 +44,7 @@ class HomeApp extends StatelessWidget {
       body: const Padding(
         padding: EdgeInsets.all(15),
         child: Center(
-          child: VerticalHorizontalShow(),
+          child: StackWidget(),
         ),
       ),
     );
