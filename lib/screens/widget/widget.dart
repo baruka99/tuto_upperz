@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 class TextWidget extends StatelessWidget {
@@ -168,6 +170,57 @@ class CenteredStackWidget extends StatelessWidget {
             color: Colors.green,
           ),
         ),
+      ],
+    );
+  }
+}
+
+class MultiColorOnContainer extends StatefulWidget {
+  const MultiColorOnContainer({Key? key}) : super(key: key);
+
+  @override
+  State<MultiColorOnContainer> createState() => _MultiColorOnContainerState();
+}
+
+class _MultiColorOnContainerState extends State<MultiColorOnContainer> {
+  List colors = [
+    Colors.red,
+    Colors.green,
+    Colors.yellow,
+    Colors.black,
+    Colors.amberAccent,
+    Colors.blue,
+    Colors.purple,
+  ];
+  Random random = Random();
+
+  int index = 0;
+
+  void changeColorIndex() {
+    setState(() => index = random.nextInt(6));
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        AnimatedContainer(
+          height: 150,
+          width: 150,
+          duration: const Duration(
+            seconds: 1,
+          ),
+          decoration: BoxDecoration(
+            color: colors[index],
+          ),
+        ),
+        const SizedBox(
+          height: 30,
+        ),
+        ElevatedButton(
+          onPressed: changeColorIndex,
+          child: const Text("Changer la couleur"),
+        )
       ],
     );
   }

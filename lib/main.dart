@@ -41,10 +41,15 @@ class HomeApp extends StatelessWidget {
           )
         ],
       ),
-      body: const Padding(
-        padding: EdgeInsets.all(15),
+      body: Padding(
+        padding: const EdgeInsets.all(15),
         child: Center(
-          child: StackWidget(),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: const [
+              MultiColorOnContainer(),
+            ],
+          ),
         ),
       ),
     );
